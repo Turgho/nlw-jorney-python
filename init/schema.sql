@@ -11,11 +11,11 @@ CREATE TABLE IF NOT EXISTS 'trips' (
 CREATE TABLE IF NOT EXISTS 'emails_to_invite' (
     id TEXT PRIMARY KEY,
     trip_id TEXT,
-    emails TEXT NOT NULL,
+    email TEXT NOT NULL,
     FOREIGN KEY (trip_id) REFERENCES trips(id)
 );
 
-CREATE TABLE IF NOT EXISTS 'links_trip' (
+CREATE TABLE IF NOT EXISTS 'links' (
     id TEXT PRIMARY KEY,
     trip_id TEXT,
     link TEXT NOT NULL,

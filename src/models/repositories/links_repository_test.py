@@ -16,6 +16,7 @@ def test_registry_link():
     trip_link_info = {
         'id': str(uuid.uuid4()),
         'trip_id': trip_id,
+        'title': 'Hotel',
         'link': 'http://google.com'
     }
     

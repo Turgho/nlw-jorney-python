@@ -7,18 +7,23 @@ class LinksRepository:
         self.__conn = conn
         
     def registry_link(self, link_info: Dict) -> None:
+        print(link_info)
+        
         cursor = self.__conn.cursor()
         cursor.execute(
-            '''INSERT INTO links (
+            '''
+                INSERT INTO links (
                     id,
                     trip_id,
+                    title,
                     link
                 ) VALUES (
-                    ?, ?, ?
+                    ?, ?, ?, ?
                 )
             ''', (
                 link_info['id'],
                 link_info['trip_id'],
+                link_info['title'],
                 link_info['link']
             )
         )

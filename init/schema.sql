@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS 'trips' (
     id TEXT PRIMARY KEY,
-    description TEXT NOT NULL,
+    destination TEXT NOT NULL,
     start_date DATETIME,
     end_date DATETIME,
     owner_name TEXT NOT NULL,

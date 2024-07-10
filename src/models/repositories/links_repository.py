@@ -32,8 +32,7 @@ class LinksRepository:
     def find_link_from_trip(self, trip_id: str) -> Tuple:
         cursor = self.__conn.cursor()
         cursor.execute(
-            '''SELECT * FROM links WHERE id = ?''', (trip_id,)
+            '''SELECT * FROM links WHERE trip_id = ?''', (trip_id,)
         )
-        link = cursor.fetchall()
-        return link
+        return cursor.fetchall()
     

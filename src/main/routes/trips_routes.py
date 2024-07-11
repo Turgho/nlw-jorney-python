@@ -115,7 +115,7 @@ def find_participants(trip_id):
     
     return jsonify(response['body'], response['status_code'])
 
-@trips_routes_bp.route('/participants/<participant_id>/confirm', methods=['GET'])
+@trips_routes_bp.route('/participants/<participant_id>/confirm', methods=['PATCH'])
 def confirm_participant(participant_id):
     conn = conn = db_connection_handdler.get_connection()
     

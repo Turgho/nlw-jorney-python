@@ -23,7 +23,7 @@ def test_regestry_email():
     email_to_invite_repository.registry_email(email_trips_info)
 
 @pytest.mark.skip(reason='interacao com o banco de dados')
-def test_emails_from_trip():
+def test_find_emails_from_trip():
     conn = db_connection_handdler.get_connection()
     emails_to_invite_repository = EmailsToInviteRepository(conn)
     

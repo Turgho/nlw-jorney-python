@@ -20,7 +20,7 @@ git clone https://github.com/Turgho/nlw-jorney-python.git
 cd nlw-jorney-python
 ```
 
-### 2. Instalar VENV
+### 2. Criar VENV
 
 **Linux/Mac**
 ```bash

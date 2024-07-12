@@ -10,6 +10,8 @@ from .activities_repository import ActivitiesRepository
 db_connection_handdler.connect()
 trip_id = str(uuid.uuid4())
 
+# Para testar cada função, comente ou tire: @pytest.mark.skip
+
 @pytest.mark.skip(reason='interacao com o banco de dados')
 def test_registry_actvities():
     conn = db_connection_handdler.get_connection()

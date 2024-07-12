@@ -9,6 +9,9 @@ from .links_repository import LinksRepository
 db_connection_handdler.connect()
 trip_id = str(uuid.uuid4())
 
+# Para testar cada função, comente ou tire: @pytest.mark.skip
+
+@pytest.mark.skip(reason='interacao com o banco de dados')
 def test_registry_link():
     conn = db_connection_handdler.get_connection()
     links_repository = LinksRepository(conn)
